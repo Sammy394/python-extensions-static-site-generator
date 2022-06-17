@@ -1,7 +1,7 @@
 import importlib
 import sys
 
-from pathlib import path
+from pathlib import Path
 
 def load_module(directory, name):
     sys.path.insert(0, directory)
@@ -14,4 +14,4 @@ def load_directory(directory):
 
 def load_bundled():
     directory = Path(__file__).parent / "extensions"
-    load_directory(directory)       
+    load_directory(directory)
